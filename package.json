@@ -10,6 +10,8 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "angular-animate": "^1.5.7",
+    "angular-touch": "^1.5.7",
     "ejs": "2.4.1",
     "express": "4.13.3"
   },
@@ -22,5 +24,9 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "webpack": "^1.13.1"
+  }
 }
