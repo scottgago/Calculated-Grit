@@ -2,9 +2,10 @@
 	angular.module('gridList', ['ngMaterial'])
 		.controller('gridListCtrl', gridListCtrl)
 
-	function TopMenuCtrl(){
-		console.log("initialized Ctrl")
-	}
+	function gridListCtrl($scope){
+    	var vm = this
+  	}
+  
 })()
 
 require('./gridlist.directive')

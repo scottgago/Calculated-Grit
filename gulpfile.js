@@ -27,18 +27,22 @@ gulp.task('compress', function(){
 })
 
 gulp.task('sass', function () {
-  gulp.src('dev/assets/sass/**/*.scss')
+  gulp.src('dev/assets/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('build/assets/css'))
   reload()
 });
 
 gulp.task('html', function(){
-	gulp.src('dev/*.html')
+	gulp.src('dev/index.html')
 		.pipe(gulp.dest('build'))
+
+	gulp.src('dev/content/*.html')
+		.pipe(gulp.dest('build/js/templates'))
 
 	reload()
 })
+
 
 gulp.task('watch build', function(){
 	browserSync.init({
@@ -48,9 +52,10 @@ gulp.task('watch build', function(){
     });
 	
 	gulp.watch('dev/*.html', ['html'])
+	gulp.watch('dev/content/*.html', ['html'])
 	gulp.watch('dev/assets/sass/*', ['sass'])
 	gulp.watch('dev/assets/img/*', ['compress'])
-	gulp.watch('dev/*.js', ['build'])
+	gulp.watch('dev/**/*.js', ['build'])
 })
 
 gulp.task('default', ['build', 'sass', 'html', 'compress', 'watch build'])

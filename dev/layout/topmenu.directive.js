@@ -1,5 +1,4 @@
 (function(){
-	console.log("sup")
 	angular.module('topMenu', ['ngMaterial'])
 		.directive('sgTopmenu', SgTopMenu)
 
