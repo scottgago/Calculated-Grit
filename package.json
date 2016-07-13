@@ -1,32 +1,31 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "5.9.1"
-  },
+  "name": "calculatedgrit",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "angular-animate": "^1.5.7",
-    "angular-touch": "^1.5.7",
-    "ejs": "2.4.1",
-    "express": "4.13.3"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "git+https://github.com/scottgago/Calculated-Grit.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottgago/Calculated-Grit/issues"
+  },
+  "homepage": "https://github.com/scottgago/Calculated-Grit#readme",
   "devDependencies": {
-    "angular": "^1.5.7",
-    "webpack": "^1.13.1"
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-image": "^2.0.1",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

@@ -1,5 +1,5 @@
 (function(){
-	angular.module("app",[])
-})();
+	angular.module('app', ['ngMaterial', 'topMenu'])
+})()
 
-require('./app.config')
+require('./layout/topmenu.controller')
