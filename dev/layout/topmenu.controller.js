@@ -1,5 +1,5 @@
 (function(){
-	angular.module('topMenu', ['ngMaterial'])
+	angular.module('topMenu', [])
 		.controller('topMenuCtrl', TopMenuCtrl)
 
 	function TopMenuCtrl(){

@@ -6,6 +6,7 @@ browserify = require('browserify')
     source = require('vinyl-source-stream')
     buffer = require('vinyl-buffer')
 browserSync = require('browser-sync').create()
+  uglifycss = require('gulp-uglifycss');
 reload = browserSync.reload;
 
 
@@ -29,6 +30,10 @@ gulp.task('compress', function(){
 gulp.task('sass', function () {
   gulp.src('dev/assets/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+    }))
     .pipe(gulp.dest('build/assets/css'))
   reload()
 });
@@ -38,6 +43,9 @@ gulp.task('html', function(){
 		.pipe(gulp.dest('build'))
 
 	gulp.src('dev/content/*.html')
+		.pipe(gulp.dest('build/js/templates'))
+
+	gulp.src('dev/layout/*.html')
 		.pipe(gulp.dest('build/js/templates'))
 
 	reload()

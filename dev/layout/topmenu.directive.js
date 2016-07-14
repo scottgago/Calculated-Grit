@@ -1,11 +1,11 @@
 (function(){
-	angular.module('topMenu', ['ngMaterial'])
+	angular.module('topMenu')
 		.directive('sgTopmenu', SgTopMenu)
 
 	function SgTopMenu(){
 		return {
 			restrict: 'E',
-			templateUrl: 'topmenu.tpl.html'
+			templateUrl: './js/templates/topmenu.tpl.html'
 		}
 	}
 })()

@@ -1,5 +1,5 @@
 (function(){
-	angular.module('app', ['gridList'])
+	angular.module('app', ['gridList', 'topMenu'])
 })()
 
 require('./layout/topmenu.controller')
